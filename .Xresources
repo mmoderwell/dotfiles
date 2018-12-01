@@ -1,0 +1,46 @@
+! Fonts
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.rgba: rgb
+Xft.hintsyle: hintfull
+Xft.dpi: 120
+URxvt.font:         xft:Hack:pixelsize=10,xft:Symbola
+URxvt.boldFont:     xft:Hack-Bold:pixelsize=10:weight=bold,xft:Symbola
+URxvt.italicFont:   xft:Hack-Italic:pixelsize=10:slant=italic,xft:Symbola
+
+! special
+*.foreground:   #d2d4d3
+*.background:   #17191b
+*.cursorColor:  #d2d4d3
+
+! black
+*.color0:       #282a2e
+*.color8:       #373b41
+
+! red
+*.color1:       #a74141
+*.color9:       #c75b5b
+
+! green
+*.color2:       #728f39
+*.color10:      #939c44
+
+! yellow
+*.color3:       #cf8755
+*.color11:      #deb461
+
+! blue
+*.color4:       #6e97b8
+*.color12:      #97bee0
+
+! magenta
+*.color5:       #9b6aab
+*.color13:      #b294bb
+
+! cyan
+*.color6:       #5e8d87
+*.color14:      #8abeb7
+
+! white
+*.color7:       #999a9c
+*.color15:      #e1e1e1

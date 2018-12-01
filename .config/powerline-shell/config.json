@@ -1,0 +1,12 @@
+{
+  "segments": [
+    "username",
+    "hostname",
+    "ssh",
+    "git",
+    "jobs",
+    "root"
+  ],
+  "mode": "patched",
+  "theme": "~/.config/powerline-shell/basic.py"
+}

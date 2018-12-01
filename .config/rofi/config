@@ -1,0 +1,61 @@
+[colors]
+
+# special
+foreground      = #d2d4d3
+foreground_bold = #d2d4d3
+cursor          = #d2d4d3
+background      = #17191b
+
+# black
+color0  = #282a2e
+color8  = #373b41
+
+# red
+color1  = #a74141
+color9  = #c75b5b
+
+# green
+color2  = #728f39
+color10 = #939c44
+
+# yellow
+color3  = #cf8755
+color11 = #deb461
+
+# blue
+color4  = #6e97b8
+color12 = #97bee0
+
+# magenta
+color5  = #9b6aab
+color13 = #b294bb
+
+# cyan
+color6  = #5e8d87
+color14 = #8abeb7
+
+# white
+color7  = #999a9c
+color15 = #e1e1e1
+
+rofi.font: Hack 12
+!                  bg       fg       bg-alt   hl-bg    hl-fg
+rofi.color-window: #17191b, #999a9c, #999a9c
+rofi.color-normal: #17191b, #999a9c, #17191b, #17191b, #97bee0
+rofi.color-active: #17191b, #999a9c, #17191b, #17191b, #97bee0
+rofi.color-urgent: #17191b, #999a9c, #97bee0, #17191b, #97bee0
+
+rofi.separator-style: none
+rofi.sidebar-mode: true
+rofi.width : 30
+rofi.lines: 7
+rofi.bw: 4
+rofi.columns: 1
+rofi.padding: 20
+rofi.fixed-num-lines: false
+rofi.hide-scrollbar: true
+rofi.scrollbar-width: 0
+rofi.line-margin: 5
+
+rofi.yoffset: -100%
+rofi.xoffset: 0
