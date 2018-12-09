@@ -16,6 +16,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec termite
 
+# lock the system
+bindsym $win_key+l exec ~/.scripts/lock.sh
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -176,5 +179,8 @@ client.placeholder      $color7 $color7 $color7 $color7 $color7
 client.background       $color7
 
 exec_always --no-startup-id "$HOME/.scripts/polybar.sh"
-exec feh --bg-scale ~/.wallpaper/unsplash.jpg
+exec_always --no-startup-id i3-msg "workspace 1; exec termite -e neofetch"
+exec --no-startup-id i3-msg "workspace 1; exec termite -e gotop"
+exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec_always feh --bg-scale ~/.wallpaper/city_dark.jpg
 exec compton -CGb --config ~/.config/compton/config

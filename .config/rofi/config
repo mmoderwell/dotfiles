@@ -39,6 +39,7 @@ color7  = #999a9c
 color15 = #e1e1e1
 
 rofi.font: Hack 12
+
 !                  bg       fg       bg-alt   hl-bg    hl-fg
 rofi.color-window: #17191b, #999a9c, #999a9c
 rofi.color-normal: #17191b, #999a9c, #17191b, #17191b, #97bee0
@@ -59,3 +60,9 @@ rofi.line-margin: 5
 
 rofi.yoffset: -100%
 rofi.xoffset: 0
+
+rofi.terminal: termite
+rofi.ssh-client:           ssh
+rofi.ssh-command:          {terminal} -e "{ssh-client} {host}"
+rofi.run-command:          {cmd}
+rofi.run-shell-command:    {terminal} -e {cmd}

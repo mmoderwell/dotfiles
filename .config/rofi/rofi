@@ -9,7 +9,7 @@
 ! "Number of columns" Set from: Default
 ! rofi.columns:                        1
 ! "Font to use" Set from: XResources
-rofi.font:                           Terminus 9
+rofi.font:                           Hack 12
 ! "Color scheme for normal row" Set from: XResources
 rofi.color-normal:                   #142a3a, #52AD91, #142a3a, #6673BF, #B0EAD9
 ! "Color scheme for urgent row" Set from: Default
@@ -31,7 +31,7 @@ rofi.color-window:                   #142a3a, #142a3a
 ! "Always show number of lines" Set from: Default
 ! rofi.fixed-num-lines:                false
 ! "Terminal to use" Set from: Default
-! rofi.terminal:                       rofi-sensible-terminal
+rofi.terminal:                       termite
 ! "Ssh client to use" Set from: Default
 ! rofi.ssh-client:                     ssh
 ! "Ssh command to execute" Set from: Default
