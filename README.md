@@ -3,7 +3,7 @@ A bunch of config files for my Linux system to make things look nice and to be p
 
 ### Distro of choice: Arch Linux
 
-![Terminals](/screens/example.jpg?raw=true "Terminals")
-![Project](/screens/coding.jpg?raw=true "Working on a project")
-![Terminal Apps](/screens/info.jpg?raw=true "Some terminal programs")
+![Terminals](/screens/example.png?raw=true "Terminals")
+![Project](/screens/coding.png?raw=true "Working on a project")
+![Terminal Apps](/screens/info.png?raw=true "Some terminal programs")
 
