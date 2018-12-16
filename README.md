@@ -1,4 +1,4 @@
-## Matt Moderwell's Linux configuration
+## Matt's Linux configuration
 A bunch of config files for my Linux system to make things look nice and to be productive.
 
 ### General Config
@@ -19,7 +19,4 @@ A bunch of config files for my Linux system to make things look nice and to be p
 &nbsp;
 ### Working on a class project (chromium, vim on remote server)
 &nbsp;
-![Project](/screens/coding.png?raw=true "Working on a project")
-
-
-
+![Project](/screens/coding.png?raw=true "Working on a school project")
