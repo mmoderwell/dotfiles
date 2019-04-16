@@ -1,0 +1,6 @@
+VteTerminal, vte-terminal {
+    padding: 40px;
+}
+.solid-csd headerbar .title {
+    font-size: 0;
+}

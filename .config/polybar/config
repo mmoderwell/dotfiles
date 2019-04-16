@@ -25,7 +25,7 @@ color15 = ${xrdb:color15}
 ;monitor = ${env:MONITOR:HDMI-1}
 bottom = true
 width = 96%
-height = 40
+height = 46
 offset-x = 2%
 offset-y = 1px
 radius = 2
@@ -40,7 +40,7 @@ foreground = ${colors.foreground}
 border-size = 10
 border-color = #00000000
 
-
+dpi = 120
 
 padding-left = 0
 padding-right = 2
@@ -60,7 +60,7 @@ font-1 = MaterialIcons:fontformat=truetype:size=14;3
 
 modules-left = i3
 modules-center = xwindow
-modules-right = volume battery filesystem memory cpu date lock
+modules-right = volume wlan battery memory  cpu date lock powermenu
 
 ;tray-position = right
 ;tray-padding = 12px
@@ -75,7 +75,7 @@ modules-right = volume battery filesystem memory cpu date lock
 ; Scale factor for tray clients
 ;tray-scale = 1.0
 
-;wm-restack = i3
+wm-restack = i3
 override-redirect = true
 
 scroll-up = i3wm-wsnext
@@ -105,6 +105,15 @@ type = internal/i3
 ;format = <label-state> <label-mode>
 ;index-sort = true
 ;wrapping-scroll = false
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-default = 
+
+format = <label-state> <label-mode>
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
@@ -175,7 +184,7 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix = ""
-format-prefix-foreground = ${colors.color7}
+format-prefix-foreground = ${colors.color4}
 format-underline = #f90000
 label = %percentage:2%%
 
@@ -183,31 +192,31 @@ label = %percentage:2%%
 type = internal/memory
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.color7}
+format-prefix-foreground = ${colors.color1}
 format-underline = #4bffdc
 label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp1s0
+interface = wlp3s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
 label-connected = %essid%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected = 
+;;format-disconnected = <label-disconnected>
+format-disconnected-underline = ${self.format-connected-underline}
+label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.color7}
+ramp-signal-1 =  1
+ramp-signal-2 =  2
+ramp-signal-3 =  3
+ramp-signal-4 =  4
+ramp-signal-foreground = ${colors.color12}
 
 [module/eth]
 type = internal/network
@@ -247,6 +256,14 @@ label-background = ${colors.color7}
 [module/volume]
 type = internal/alsa
 
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+
+speaker-mixer = Speaker
+headphone-mixer = Headphone
+headphone-id = 9
+
 format-volume = <label-volume> <bar-volume>
 label-volume = 
 label-volume-foreground = ${colors.foreground}
@@ -274,7 +291,7 @@ bar-volume-empty-foreground = ${colors.color7}
 
 [module/battery]
 type = internal/battery
-battery = BAT0
+battery = BAT1
 adapter = ADP1
 full-at = 98
 
@@ -284,18 +301,18 @@ format-charging-underline = #ffb52a
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.color2}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
 ramp-capacity-foreground = ${colors.color7}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
 animation-charging-foreground = ${colors.color7}
 animation-charging-framerate = 750
 
