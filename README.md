@@ -4,7 +4,7 @@ A bunch of config files for my Linux system to make things look nice and to be p
 ### General Config
 * OS: Arch Linux
 * Shell: Bash
-* WM: i3-gaps
+* WM: i3-gaps-rounded
 * Theme: Arc
 * Icons: Papirus
 * Terminal: Termite
