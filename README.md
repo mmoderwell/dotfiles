@@ -19,4 +19,4 @@ A bunch of config files for my Linux system to make things look nice and to be p
 &nbsp;
 ### Working on a personal project (Sublime Text 3, terminals running Node and MongoDB)
 &nbsp;
-![Project](/screens/coding.png?raw=true "Working on a personal project")
+![Project](/screens/example.png?raw=true "Working on a personal project")
