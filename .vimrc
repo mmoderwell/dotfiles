@@ -132,7 +132,7 @@ if $COLORTERM == 'termite'
 endif
 
 try
-    colorscheme desert
+    colorscheme spacegray
 catch
 endtry
 

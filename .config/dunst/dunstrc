@@ -5,10 +5,10 @@
     monitor = 0
 
     # Display notification on focused monitor.
-    follow = mouse
+    #follow = mouse
 
     # The geometry of the window:
-    geometry = "300x5-30+20"
+    geometry = "400x10-30+20"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -34,11 +34,11 @@
     padding = 8
 
     # Horizontal padding.
-    horizontal_padding = 8
+    horizontal_padding = 16
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 0
 
     # Defines color of the frame around the notification window.
     frame_color = "#aaaaaa"
@@ -102,7 +102,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "<b>%s</b>\n%b"
+    format = "%a\n\n<b>%s</b>\n\n"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -136,10 +136,10 @@
     ### Icons ###
 
     # Align icons left/right/off
-    icon_position = off
+    icon_position = left
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 32
+    max_icon_size = 256
 
     # Paths to default icons.
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
@@ -223,14 +223,14 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#181818"
-    foreground = "#E3C7AF"
+    foreground = "#FFFFFF"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
     background = "#181818"
-    foreground = "#E3C7AF"
+    foreground = "#FFFFFF"
     timeout = 20
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon

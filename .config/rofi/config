@@ -57,6 +57,7 @@ rofi.fixed-num-lines: false
 rofi.hide-scrollbar: true
 rofi.scrollbar-width: 0
 rofi.line-margin: 5
+rofi.show-icons: true
 
 rofi.yoffset: -100%
 rofi.xoffset: 0

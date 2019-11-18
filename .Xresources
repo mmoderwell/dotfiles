@@ -3,7 +3,8 @@ Xft.antialias: 1
 Xft.hinting: 1
 Xft.rgba: rgb
 Xft.hintsyle: hintfull
-Xft.dpi: 120
+Xft.dpi: 136
+!Xft.dpi: 80
 URxvt.font:         xft:Hack:pixelsize=10,xft:Symbola
 URxvt.boldFont:     xft:Hack-Bold:pixelsize=10:weight=bold,xft:Symbola
 URxvt.italicFont:   xft:Hack-Italic:pixelsize=10:slant=italic,xft:Symbola

@@ -4,18 +4,15 @@ shadow = true;
 no-dnd-shadow = true;
 no-dock-shadow = false;
 clear-shadow = true;
-shadow-radius = 7;
-shadow-offset-x = -7;
-shadow-offset-y = -7;
-# shadow-opacity = 0.7;
+shadow-radius = 14;
+shadow-offset-x = -12;
+shadow-offset-y = -12;
+shadow-opacity = 0.7;
 # shadow-red = 0.0;
 # shadow-green = 0.0;
 # shadow-blue = 0.0;
 shadow-exclude = [
 	"name = 'Notification'",
-	"class_g = 'Conky'",
-	"class_g ?= 'Notify-osd'",
-	"class_g = 'Cairo-clock'",
 	"_GTK_FRAME_EXTENTS@:c"
 ];
 # shadow-exclude = "n:e:Notification";
@@ -42,7 +39,9 @@ blur-background-exclude = [
 	"_GTK_FRAME_EXTENTS@:c"
 ];
 # opacity-rule = [ "80:class_g = 'URxvt'" ];
-
+opacity-rule = [
+  "0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'"
+];
 # Fading
 fading = true;
 # fade-delta = 30;

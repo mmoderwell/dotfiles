@@ -5,6 +5,7 @@
     "ssh",
     "git",
     "jobs",
+    "~/.config/powerline-shell/venv.py",
     "root"
   ],
   "mode": "patched",

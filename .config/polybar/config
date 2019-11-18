@@ -22,7 +22,7 @@ color15 = ${xrdb:color15}
 
 
 [bar/mainbar]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:eDP-1}
 bottom = true
 width = 96%
 height = 46
@@ -60,7 +60,7 @@ font-1 = MaterialIcons:fontformat=truetype:size=14;3
 
 modules-left = i3
 modules-center = xwindow
-modules-right = volume wlan battery memory  cpu date lock powermenu
+modules-right = volume wlan battery memory  cpu date powermenu
 
 ;tray-position = right
 ;tray-padding = 12px
@@ -106,44 +106,49 @@ type = internal/i3
 ;index-sort = true
 ;wrapping-scroll = false
 
-ws-icon-0 = 1;
+ws-icon-0 = 1;
 ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-default = 
+ws-icon-2 = 3;
+ws-icon-3 = 4;4
+ws-icon-4 = 5;
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;10
+#ws-icon-default = 
 
 format = <label-state> <label-mode>
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+#pin-workspaces = true
 label-mode =%mode%
-label-mode-padding = 2
+label-mode-padding = 1
 label-mode-foreground = ${colors.color0}
 label-mode-background = ${colors.color3}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %icon%
 label-focused-foreground = ${colors.background}
 label-focused-background = ${colors.color7}
 label-focused-underline = ${colors.color7}
-label-focused-padding = 2
+label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
-label-unfocused-padding = 2
+label-unfocused = %icon%
+label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %icon%
 label-visible-background = ${colors.color7}
 label-visible-underline = ${colors.color7}
-label-visible-padding = 4
+label-visible-padding = 1
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %icon%
 label-urgent-background = ${colors.color1}
 label-urgent-forground = #000
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 [module/mpd]
 type = internal/mpd
@@ -199,6 +204,7 @@ label = %percentage_used%%
 [module/wlan]
 type = internal/network
 interface = wlp3s0
+#interface = mlan0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -211,11 +217,11 @@ format-disconnected-underline = ${self.format-connected-underline}
 label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 =  1
-ramp-signal-2 =  2
-ramp-signal-3 =  3
-ramp-signal-4 =  4
+ramp-signal-0 =  
+ramp-signal-1 =  
+ramp-signal-2 =  
+ramp-signal-3 =  
+ramp-signal-4 =  
 ramp-signal-foreground = ${colors.color12}
 
 [module/eth]
@@ -254,7 +260,7 @@ label-background = ${colors.color7}
 
 
 [module/volume]
-type = internal/alsa
+type = internal/pulseaudio
 
 master-soundcard = default
 speaker-soundcard = default

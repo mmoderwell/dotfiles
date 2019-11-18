@@ -15,9 +15,18 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec termite
-
+# start chromium
+bindsym $mod+c exec chromium
+# start file manager thunar
+bindsym $win_key+e exec thunar
+# start network tui
+bindsym $mod+m exec env XDG_CURRENT_DESKTOP=GNOME gnome-control-center
+bindsym $mod+b exec blueberry
 # lock the system
 bindsym $win_key+l exec ~/.scripts/lock.sh
+
+#flash the current window with flashfoucus
+bindsym $mod+n exec --no-startup-id flash_window
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -30,10 +39,10 @@ bindsym $mod+d exec rofi -show run -config /home/matt/.config/rofi/config
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
+bindsym $mod+h focus left
 bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+j focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -42,10 +51,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
+bindsym $mod+Shift+h move left
 bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+j move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -53,8 +62,11 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# Moving workspaces between screens 
+bindsym $mod+p move workspace to output right
+
 # split in horizontal orientation
-bindsym $mod+h split h
+#bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -69,6 +81,14 @@ bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
+
+for_window [class="(?i)thunar"] floating enable resize set 1700 1000
+for_window [instance="termite" title="nmtui"] floating enable resize set 1200 1000
+for_window [class="(?i)gnome-control-center"] floating enable resize set 1200 800
+for_window [class="(?i)blueberry"] floating enable resize set 1200 800
+for_window [class="(?i)cmst"] floating enable resize set 1000 1200
+for_window [class="(?i)lxappearance"] floating enable resize set 1600 1000
+
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -132,10 +152,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -154,8 +174,9 @@ bindsym $mod+r mode "resize"
 # Remove Borders
 for_window [class="^.*"] border pixel 0
 
-gaps outer 24
-gaps inner 20
+gaps outer 36
+gaps inner 18
+border_radius 4
 
 # Smart gaps (gaps used if only more than one container on the workspace)
 #smart_gaps on
@@ -169,19 +190,29 @@ set_from_resource $color5 color5
 set_from_resource $color6 color6
 set_from_resource $color7 color7
 set_from_resource $color8 color8
+set_from_resource $backgr background
 
 # Basic color configuration using the Base16 variables for windows and borders.
 # Property Name         Border  BG      Text    Indicator Child Border
 client.focused          $color7 $color4 $color0 $color4 $color4
-client.focused_inactive $color7 $color7 $color7 #585858 $color7
-client.unfocused        $color7 $color0 $color7 $color7 $color7
+client.focused_inactive $color7 $color7 $color7 $color7 $color7
+client.unfocused        $color7 $color0 $color7 $backgr $backgr
 client.urgent           $color7 $color1 $color0 $color1 $color7
 client.placeholder      $color7 $color7 $color7 $color7 $color7
-client.background       $color7
+client.background       $color0
 
 exec_always --no-startup-id "$HOME/.scripts/polybar.sh"
-#exec_always --no-startup-id i3-msg "workspace 1; exec termite -e neofetch"
+
+#exec_always --no-startup-id i3-msg "workspace 1; exec chromium"
+#exec_always --no-startup-id i3-msg "workspace 2; exec subl3"
+#exec_always --no-startup-id i3-msg "workspace 2; exec termite"
+#exec_always --no-startup-id i3-msg "workspace 3; exec spotify"
+#exec_always --no-startup-id i3-msg "workspace 3; exec slack"
+
 #exec --no-startup-id i3-msg "workspace 1; exec termite -e gotop"
-exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
-exec_always feh --bg-scale ~/.wallpaper/city_dark.jpg
-exec compton -CGb --config ~/.config/compton/config
+exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec_always feh --bg-scale ~/.wallpaper/sign.jpg
+#exec_always hsetroot -solid '#6a80a5'
+exec_always --no-startup-id compton -CGb --config ~/.config/compton/config
+exec_always --no-startup-id flashfocus
+exec_always --no-startup-id xbindkeys

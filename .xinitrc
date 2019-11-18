@@ -6,4 +6,5 @@ xrdb ~/.Xresources
 #colors.sh &
 #compton --config .compton.conf &
 #sxhkd &
+xbindkeys
 exec i3

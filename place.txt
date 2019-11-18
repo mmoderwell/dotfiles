@@ -1,0 +1,6 @@
+/etc/udev/rules.d/backlight.rules
+/etc/systemd/logind.conf
+
+
+xrandr --output HDMI-1 --scale-from 2560x1440 --right-of eDP-1 && xrandr --output eDP-1 --scale 0.9999x0.9999
+

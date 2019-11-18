@@ -21,3 +21,5 @@ function _update_ps1() {
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
+
+alias gnome-cc='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
